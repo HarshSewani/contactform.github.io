@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact form using javascript</title>
+    <title>Daily Report</title>
 </head>
 <body>
     <div class="container">
         <form onsubmit="SendEmail(); reset(); return false;">
-            <h1>GET IN TOUCH</h1>
+            <h1>Daily Report</h1>
             <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email id" required>
-            <input type="text" id="phone" placeholder="Phone no." required>     
-            <textarea id="message" rows="9" placeholder="How we can help you!!!"></textarea>
+            <input type="date" id="date" placeholder="date" required>
+            <input type="text" id="phone" placeholder="Topic." required>     
+            <textarea id="message" rows="9" placeholder="Dear Diary"></textarea>
             <button type="submit">Send</button>
            </form>
     </div>    
@@ -27,11 +27,11 @@
             From : "Sewani98@gmail.com",
             Subject : "This is the subject",
             Body : "Name: " +document.getElementById("name").value
-            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Date: " + document.getElementById("date").value
             + "<br> Phone no: "+ document.getElementById("phone").value
             + "<br> Message: "+ document.getElementById("message").value
         }).then(
-        message => alert("Thanks for contactiong us!!!")
+        message => alert("Thanks for submiting your daily report!!!")
         );
          }
     </script>
