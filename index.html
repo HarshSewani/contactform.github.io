@@ -21,11 +21,12 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function SendEmail(){
-            Email.send({
-            SecureToken : "ed4523ce-19d6-4fb8-badb-882a3d23194d",
-            To : 'harsh2sewani@gmail.com',
-            From : "Sewani98@gmail.com",
-            Subject : "This is the subject",
+          Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "Sewani98@gmail.com",
+          Password : "03A53FA0FC80F2EA804A57502DB3A7238844",
+          To : 'harsh2sewani@gmail.com',
+          From : "Sewani98@gmail.com",
             Body : "Name: " +document.getElementById("name").value
             + "<br> Date: " + document.getElementById("date").value
             + "<br> Phone no: "+ document.getElementById("phone").value
